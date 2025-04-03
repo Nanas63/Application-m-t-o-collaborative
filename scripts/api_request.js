@@ -1,7 +1,9 @@
-async function getData(city) {
+async function getData() {
+
+  const inputCity = document.getElementById("city").value;
 
   // const url = "http://www.prevision-meteo.ch/services/json/[nom_ville][lat=xx.xxxlng=yy.yyy]";
-  const url = "https://www.prevision-meteo.ch/services/json/" + city;
+  const url = "https://www.prevision-meteo.ch/services/json/" + inputCity;
 
   try {
 
@@ -20,25 +22,35 @@ async function getData(city) {
 
 }
 
-// getData("paris").then((el) => console.log(el.current_condition))
 
-document.addEventListener('DOMContentLoaded', async () => {
+const submitButton = document.getElementById("submit");
 
-  const data = await getData('clermont-ferrand');
-  console.log(data);
+submitButton.addEventListener('click', async function (e) {
 
-  console.log(data.current_condition.tmp);
+  e.preventDefault();
 
-  const body = document.querySelector('body');
-  const divImage = document.createElement('img');
-  divImage.id = 'test';
-  divImage.src = data.current_condition.icon;
-  body.appendChild(divImage);
+  const data = await getData();
 
+  const city = document.getElementById('cityResult');
+  city.innerText = data.city_info.name;
 
+  const temperature = document.getElementById('temperature');
+  temperature.innerText = data.current_condition.tmp;
+
+  const condition = document.getElementById('condition');
+  condition.innerText = data.current_condition.condition;
+
+  const icon = document.getElementById('icon');
+  icon.src = data.current_condition.icon;
+
+  const humidity = document.getElementById('humidity');
+  humidity.innerText = data.current_condition.humidity;
+
+  const wind = document.getElementById('wind');
+  wind.innerText = data.current_condition.wnd_spd;
+
+  console.log(city);
 
 })
-
-
 
 
