@@ -3,19 +3,25 @@ body {
     text-align: center;
     margin-top: 50px;
 }
-input, button {
+
+input,
+button {
     padding: 10px;
     font-size: 16px;
     margin: 5px;
 }
 
-*{
+* {
     background-image: url('image.jpg');
     font-family: Verdana, Geneva, Tahoma, sans-serif;
+    /* color: white; */
+}
+
+h1 {
     color: white;
 }
 
-#submit{
+#submit {
     background-color: gray;
     color: darkslategray;
     border: none;
@@ -23,14 +29,15 @@ input, button {
     cursor: pointer;
 }
 
-#enter{
+#enter {
     padding: 10px;
-    background-color:gray;
-    color:darkslategray;
+    background-color: gray;
+    color: darkslategray;
     border: none;
     border-radius: 200vh;
 }
-#city{
+
+#city {
     background-color: gray;
     border: none;
     border-radius: 200vh;
@@ -39,4 +46,6 @@ input, button {
     padding: 10px;
 }
 
-
+/* #cityResult {
+    color: black;
+} */

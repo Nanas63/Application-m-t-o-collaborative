@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,6 +9,7 @@
     <link rel="stylesheet" type="text/css" href="./style.css">
 
 </head>
+
 <body>
     <h1>Prévi Météo</h1>
     <br><br>
@@ -16,9 +18,17 @@
         <input type="text" id="city" name="city" placeholder="Ex : Paris" id="placeholder" required>
         <button type="submit" id="submit">Rechercher</button>
     </form>
-    <div id="weatherResult"></div>
+    <div id="weatherResult" class="container">
+        <span id="cityResult"></span>
+        <span id="temperature"></span>
+        <span id="condition"></span>
+        <span><img id="icon" src="" alt=""></span>
+        <span id="humidity"></span>
+        <span id="wind"></span>
+    </div>
 </body>
 
 
-<script src="./script.js"></script>
+<script src="./scripts/api_request.js"></script>
+
 </html>
