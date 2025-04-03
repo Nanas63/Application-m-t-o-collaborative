@@ -1,0 +1,42 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    margin-top: 50px;
+}
+input, button {
+    padding: 10px;
+    font-size: 16px;
+    margin: 5px;
+}
+
+*{
+    background-image: url('image.jpg');
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: white;
+}
+
+#submit{
+    background-color: gray;
+    color: darkslategray;
+    border: none;
+    border-radius: 200vh;
+    cursor: pointer;
+}
+
+#enter{
+    padding: 10px;
+    background-color:gray;
+    color:darkslategray;
+    border: none;
+    border-radius: 200vh;
+}
+#city{
+    background-color: gray;
+    border: none;
+    border-radius: 200vh;
+    width: 200px;
+    height: 30px;
+    padding: 10px;
+}
+
+
