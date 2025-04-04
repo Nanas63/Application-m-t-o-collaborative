@@ -3,7 +3,7 @@
 //const est la variable qui récupère la valeur de l'input de la ville
 //concaténation de l'url avec la ville entrée par l'utilisateur
 
-async function getData() { 
+async function getData() {
 
   const inputCity = document.getElementById("city").value;
 
@@ -27,6 +27,14 @@ async function getData() {
 
 }
 
+
+
+// let meteoDate = getData().current_condition.date;
+
+const today = document.getElementById('date-du-jour');
+let date = new Date().toLocaleDateString('fr-FR', { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' }); // "Jul 2021 Friday"
+today.innerText = date;
+
 //element bouton mis en const
 //déclenclement de l'événement au clic sur le bouton
 const submitButton = document.getElementById("submit");
@@ -44,6 +52,10 @@ submitButton.addEventListener('click', async function (e) {
   const city = document.getElementById('cityResult');
   city.innerText = data.city_info.name;
 
+  // const today = document.getElementById('date-du-jour');
+  // today.innerText = data.current_condition.date;
+
+
   const temperature = document.getElementById('temperature');
   temperature.innerText = data.current_condition.tmp + " °C";
 
@@ -52,6 +64,7 @@ submitButton.addEventListener('click', async function (e) {
 
   const icon = document.getElementById('icon');
   icon.src = data.current_condition.icon;
+
 
   const humidity = document.getElementById('humidity');
   humidity.innerText = data.current_condition.humidity + " %";
@@ -64,3 +77,9 @@ submitButton.addEventListener('click', async function (e) {
 })
 
 
+
+
+// const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
+// const today = new Date();
+// const formattedDate = today.toLocaleDateString("fr-FR", options);
+// console.log(formattedDate);
