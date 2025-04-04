@@ -11,15 +11,20 @@
 </head>
 
 <body>
+    <h1>PreviWeather</h1>
     <div class="container">
-        <h1>PreviWeather</h1>
+
         <!-- <br><br> -->
+
         <form id="cityForm">
-            <label for="city" id="enter">Entrez une ville :</label>
+            <label for="city" id="enter">Entrez une ville:</label><br><br>
             <input type="text" id="city" name="city" placeholder="Ex : Paris" id="placeholder" required>
             <button type="submit" id="submit">Rechercher</button>
         </form>
-        <p>Date du jour</p>
+        <div id="date">
+            <span>Aujourd'hui</span>
+            <p id="date-du-jour">Date du jour</p>
+        </div>
         <div id="weatherResult">
 
             <div class="dataviz">
@@ -35,7 +40,7 @@
                 <p id="condition"></p>
             </div>
             <div class="dataviz">
-                <img id="icon" src="" alt="conditions icon">
+                <img id="icon" src="meteo_general.png" alt="icône météo">
             </div>
             <div class="dataviz">
                 <span id="humidity-label">Taux humidité</span>
