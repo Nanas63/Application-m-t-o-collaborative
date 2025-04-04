@@ -42,6 +42,7 @@ form div {
     gap: 20px;
 }
 
+/* Formulaire*/
 #submit {
     background: linear-gradient(25deg, rgba(2, 0, 36, 1) 0%, rgba(255, 255, 255, 1) 0%, rgba(0, 212, 255, 0.814805145691089) 93%);
     color: darkslategray;
@@ -63,6 +64,10 @@ form div {
     background: linear-gradient(25deg, rgba(2, 0, 36, 1) 0%, rgba(255, 255, 255, 1) 0%, rgba(0, 212, 255, 0.814805145691089) 93%);
     border: none;
     border-radius: 200vh;
+<<<<<<< HEAD
+=======
+    width: 150px;
+>>>>>>> api-request
     height: 30px;
     padding: 10px;
 }
@@ -71,8 +76,12 @@ form div {
 .container {
     /* border: solid black 1px; */
     min-height: 80vh;
+<<<<<<< HEAD
     width: 100%;
     max-width: 500px;
+=======
+    width: 50%;
+>>>>>>> api-request
 
 }
 
@@ -89,7 +98,11 @@ form div {
 }
 
 .dataviz {
+<<<<<<< HEAD
     width: 100%;
+=======
+    width: 150px;
+>>>>>>> api-request
     /* max-width: 30%; */
     margin-right: 10px;
     margin-bottom: 10px;
