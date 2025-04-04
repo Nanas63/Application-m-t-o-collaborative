@@ -11,20 +11,44 @@
 </head>
 
 <body>
-    <h1>Prévi Météo</h1>
-    <br><br>
-    <form id="cityForm">
-        <label for="city" id="enter">Entrez une ville :</label>
-        <input type="text" id="city" name="city" placeholder="Ex : Paris" id="placeholder" required>
-        <button type="submit" id="submit">Rechercher</button>
-    </form>
-    <div id="weatherResult" class="container">
-        <span id="cityResult"></span>
-        <span id="temperature"></span>
-        <span id="condition"></span>
-        <span><img id="icon" src="" alt=""></span>
-        <span id="humidity"></span>
-        <span id="wind"></span>
+    <div class="container">
+        <h1>PreviWeather</h1>
+        <!-- <br><br> -->
+        <form id="cityForm">
+            <label for="city" id="enter">Entrez une ville :</label>
+            <input type="text" id="city" name="city" placeholder="Ex : Paris" id="placeholder" required>
+            <button type="submit" id="submit">Rechercher</button>
+        </form>
+        <p>Date du jour</p>
+        <div id="weatherResult">
+
+            <div class="dataviz">
+                <span id="city-label">Localité</span>
+                <p id="cityResult"></p>
+            </div>
+            <div class="dataviz">
+                <span id="temperature-label">Température</span>
+                <p id="temperature"></p>
+            </div>
+            <div class="dataviz">
+                <span id="condition-label">Conditions</span>
+                <p id="condition"></p>
+            </div>
+            <div class="dataviz">
+                <img id="icon" src="" alt="conditions icon">
+            </div>
+            <div class="dataviz">
+                <span id="humidity-label">Taux humidité</span>
+                <p id="humidity"></p>
+            </div>
+            <div class="dataviz">
+                <span id="wind-label">Vitesse du vent</span>
+                <p id="wind"></p>
+            </div>
+        </div>
+        <div id="previsions">
+
+        </div>
     </div>
 </body>
 
