@@ -29,6 +29,7 @@ h1 {
     padding-top: 25px;
 }
 
+/* Formulaire*/
 #submit {
     background: linear-gradient(25deg, rgba(2, 0, 36, 1) 0%, rgba(255, 255, 255, 1) 0%, rgba(0, 212, 255, 0.814805145691089) 93%);
     color: darkslategray;
@@ -54,12 +55,7 @@ h1 {
     padding: 10px;
 }
 
-/* #cityResult {
-    color: black;
-} */
-
-
-
+/*Affichage des données*/
 .container {
     /* border: solid black 1px; */
     min-height: 80vh;

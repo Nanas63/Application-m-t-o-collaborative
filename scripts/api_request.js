@@ -1,4 +1,9 @@
-async function getData() {
+
+//connexion à l'ApI de prévision météo
+//const est la variable qui récupère la valeur de l'input de la ville
+//concaténation de l'url avec la ville entrée par l'utilisateur
+
+async function getData() { 
 
   const inputCity = document.getElementById("city").value;
 
@@ -22,15 +27,20 @@ async function getData() {
 
 }
 
-
+//element bouton mis en const
+//déclenclement de l'événement au clic sur le bouton
 const submitButton = document.getElementById("submit");
 
 submitButton.addEventListener('click', async function (e) {
 
   e.preventDefault();
 
+  //regroupe toutes les données venant de l'API dans une variable data
   const data = await getData();
 
+  //etape1 recupération de l'element HTML par son id
+  //etape2 modification de l'élément HTML avec les données de l'API
+  //etape3 affichage de la ville dans le DOM
   const city = document.getElementById('cityResult');
   city.innerText = data.city_info.name;
 
