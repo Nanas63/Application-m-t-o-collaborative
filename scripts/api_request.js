@@ -52,10 +52,6 @@ submitButton.addEventListener('click', async function (e) {
   const city = document.getElementById('cityResult');
   city.innerText = data.city_info.name;
 
-  // const today = document.getElementById('date-du-jour');
-  // today.innerText = data.current_condition.date;
-
-
   const temperature = document.getElementById('temperature');
   temperature.innerText = data.current_condition.tmp + " °C";
 
@@ -64,7 +60,6 @@ submitButton.addEventListener('click', async function (e) {
 
   const icon = document.getElementById('icon');
   icon.src = data.current_condition.icon;
-
 
   const humidity = document.getElementById('humidity');
   humidity.innerText = data.current_condition.humidity + " %";
